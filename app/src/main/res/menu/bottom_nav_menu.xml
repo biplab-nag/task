@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navProduct"
+        android:icon="@drawable/ic_nav_box"
+        android:title="@string/products" />
+    <item
+        android:id="@+id/navSearch"
+        android:icon="@drawable/ic_nav_search"
+        android:title="@string/search" />
+
+</menu>

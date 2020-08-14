@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navProduct">
+
+    <fragment
+        android:id="@+id/navProduct"
+        android:label="Product List"
+        android:name="com.krazyit.task.ui.product.ProductFragment"
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/to_detailFragment"
+            app:destination="@id/fragDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navSearch"
+        android:label="Product Search"
+        android:name="com.krazyit.task.ui.search.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/fragDetails"
+        android:label="Product Details"
+        android:name="com.krazyit.task.ui.item.ItemFragment"
+        tools:layout="@layout/fragment_item" >
+        <argument
+            android:name="name"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="desc"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="price"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            app:nullable="true" />
+
+    </fragment>
+
+</navigation>
